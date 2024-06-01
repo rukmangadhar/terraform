@@ -1,5 +1,5 @@
 # ec2 instance 
-resource "aws_instance" "test_instance" {
+resource "aws_instance" "expense" {
     count = length(var.instance_names)
     ami = var.ami_id
     vpc_security_group_ids = [aws_security_group.allow_ssh.id]

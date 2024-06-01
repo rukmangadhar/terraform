@@ -1,4 +1,4 @@
-
+# ec2 variables
 variable "ami_id" {
     type = string
     default = "ami-090252cbe067a9e58"
@@ -22,6 +22,7 @@ variable "common_tags" {
     }
 }
 
+# SSecurity group variables
 variable "sg_name" {
     type = string
     default = "allow_ssh"
@@ -40,4 +41,16 @@ variable "sg_protocal" {
 variable "sg_cider" {
     type = list(string)
     default = [ "0.0.0.0/0" ]
+}
+
+# r53 varibles
+
+variable "zoone_id" {
+    type = string
+    default = "Z0025813368RUY79HH4QH"
+}
+
+variable "domain_name" {
+    type = string
+    default = "practdaws.online"
 }
